@@ -1,32 +1,27 @@
 const arr = [1, 2, 3, 4, 1, 0, 2, 2];
 
 const divide = (arr, n) => {
-  // Write your code here
-//all subarray
-//sum for all
-//if sum<n then push
+  // Write your code here	
 let result=[]
 let maxSum=n
-//console.log(arr);
-for(let i=0;i<arr.length;i++)
+let subArr=[]
+let sum=0;
+for(let t of arr)
 {
-  for(let j=i+1;j<arr.length+1;j++)
-  { 
-     let subArr=arr.slice(i,j)
-     let sum=Sum(subArr);
-  if(sum<=maxSum) result.push(subArr)
-  // console.log(subArr)
+  if(t+sum<=maxSum)
+  {
+    subArr.push(t)
+    sum+=t
+  }
+  else{
+    result.push(subArr)
+    subArr=[]
+    subArr.push(t)
+    sum=t
   }
 }
+result.push(subArr)
 console.log(result)
-//console.log(arr);
-
-function Sum(arr)
-{
-  let sum=0
-  for(let t of arr) sum+=t
-  return sum;
-}	
 	
 };
 
