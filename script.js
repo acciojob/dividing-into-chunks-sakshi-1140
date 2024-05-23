@@ -1,9 +1,8 @@
 const arr = [1, 2, 3, 4, 1, 0, 2, 2];
 
 const divide = (arr, n) => {
-  // Write your code here	
 let result=[]
-let maxSum=n
+let maxSum=4
 let subArr=[]
 let sum=0;
 for(let t of arr)
@@ -21,8 +20,7 @@ for(let t of arr)
   }
 }
 result.push(subArr)
-console.log(result)
-	
+console.log(result)	
 };
 
 const n = prompt("Enter n: ");
