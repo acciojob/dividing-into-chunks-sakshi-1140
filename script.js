@@ -20,8 +20,9 @@ for(let t of arr)
   }
 }
 result.push(subArr)
-console.log(result)	
+//console.log(result)	
+return result
 };
 
 const n = prompt("Enter n: ");
-alert(JSON.stringify(divide(arr, n)));
+//alert(JSON.stringify(divide(arr, n)));
