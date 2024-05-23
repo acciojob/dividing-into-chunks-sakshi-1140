@@ -12,9 +12,8 @@ for(let i=0;i<arr.length;i++)
 {
   for(let j=i+1;j<arr.length+1;j++)
   { 
-     let sum=0
      let subArr=arr.slice(i,j)
-     sum=Sum(subArr);
+     let sum=Sum(subArr);
   if(sum<=maxSum) result.push(subArr)
   // console.log(subArr)
   }
